@@ -10,7 +10,8 @@ this file is ignored
 
 ???????????????????*/
 
-@import '../../../../node_modules/codemirror/lib/codemirror.css';
+// @import '../../../../node_modules/codemirror/lib/codemirror.css';
+@import './codemirror.scss';
 @import './fields/@index.scss';
 
 .ui-cmmon-comp-veganaDocViewComp-main{

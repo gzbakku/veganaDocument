@@ -623,9 +623,6 @@ function build(){
           class:'page-main-comp-menu-main-path',
           text:article_path,
         });
-        setTimeout(function () {
-          engine.view.remove(path_cont);
-        }, 3000);
       }
     }
     make_path();
@@ -1778,6 +1775,7 @@ function make_code(parent,data){
     parent:parent,
     class:"ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers-container-field-code"
   });
+  console.log(data.value);
   codemirror(engine.get.element(main),{
     value:data.value,
     lineNumbers: true,

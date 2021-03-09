@@ -47,9 +47,6 @@ function build(){
           class:'page-main-comp-menu-main-path',
           text:article_path,
         });
-        setTimeout(function () {
-          engine.view.remove(path_cont);
-        }, 3000);
       }
     }
     make_path();
