@@ -1,0 +1,33 @@
+
+
+.ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers-container-field{
+  // padding: 10px;
+  // border: 5px solid green;
+  height: 100%;
+  overflow: hidden;
+  font-family: $font-text;
+}
+
+  .ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers-container-field-heading{
+    padding: 10px;
+    font-size: 32px;
+    font-family: $font-text;
+  }
+
+  .ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers-container-field-paragraph{
+    padding: 10px;
+    font-family: $font-text;
+  }
+
+  .ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers-container-field-image{
+    padding: 10px;
+    text-align: center;
+  }
+
+  .ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers-container-field-code{
+    // height: 200px;
+    height: 100%;
+    // height: auto;
+    overflow: hidden;
+    // border: 5px solid red;
+  }

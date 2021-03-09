@@ -1,0 +1,41 @@
+/*???????????????????
+
+"@" - for sub files in a sass tree structure, ignored in main sass compiler
+example - "@sub_component.scss"
+this file is compiled only when its parent is compiled and ignored if its parent-less
+
+"!" - for files to ignore in main sass compiler
+example - "!ignored_sass_file.scss"
+this file is ignored
+
+???????????????????*/
+
+@import '../../../../node_modules/codemirror/lib/codemirror.css';
+@import './fields/@index.scss';
+
+.ui-cmmon-comp-veganaDocViewComp-main{
+  // border: 5px solid red;
+}
+
+  .ui-cmmon-comp-veganaDocViewComp-main-rows{
+    // border: 5px solid green;
+  }
+
+    .ui-cmmon-comp-veganaDocViewComp-main-rows-row{
+      // border: 5px solid blue;
+      overflow: auto;
+      width: 100%;
+      // height: auto;
+    }
+
+      .ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers{
+        // border: 5px solid pink;
+        vertical-align: middle;
+        width: 100%;
+      }
+
+        .ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers-container{
+          // border: 5px solid yellow;
+          float: left;
+          overflow: hidden;
+        }

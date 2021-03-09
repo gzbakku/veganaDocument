@@ -1,0 +1,36 @@
+/*???????????????????
+
+"@" - for sub files in a sass tree structure, ignored in main sass compiler
+example - "@sub_component.scss"
+this file is compiled only when its parent is compiled and ignored if its parent-less
+
+"!" - for files to ignore in main sass compiler
+example - "!ignored_sass_file.scss"
+this file is ignored
+
+???????????????????*/
+
+.page-main-comp-menu-main{
+  text-align: right;
+}
+
+  .page-main-comp-menu-main-path{
+    float: left;
+    font-family: $font-text;
+    color:$color-primary;
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .page-main-comp-menu-main-button{
+    background-color: $color-secondary;
+    font-family: $font-text;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    color:white;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+  }

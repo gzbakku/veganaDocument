@@ -1,0 +1,21 @@
+{
+  "name": "veganaDocument",
+  "version": "1.0.0",
+  "description": "this is a vegana document editor, its a simple web format to build web pages faster and easier without diving into deep code.",
+  "main": "electro.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "codemirror": "^5.59.4",
+    "hadron-ipc": "^1.1.1",
+    "vegana-engine": "^1.5.7"
+  },
+  "devDependencies": {
+    "electron": "^12.0.0",
+    "electron-builder": "^22.10.5"
+  }
+}

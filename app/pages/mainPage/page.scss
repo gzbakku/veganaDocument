@@ -1,0 +1,191 @@
+
+
+@import './@fields.scss';
+
+//menu
+
+.page-main-editor-menu{
+  padding: 10px;
+  // border: 5px solid blue;
+  overflow:auto;
+}
+
+  .page-main-editor-menu-button{
+    height: 25px;
+    width: 25px;
+    float: right;
+    margin-left: 10px;
+    cursor: pointer;
+    // border: 5px solid pink;
+    position: relative;
+    user-select: none;
+  }
+
+    .page-main-editor-menu-button-icon{
+      top:0px;
+      left:0px;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      // border: 5px solid yellow;
+    }
+
+    .page-main-editor-menu-button-foreground{
+      top:0px;
+      left:0px;
+      position: absolute;
+      // border: 5px solid red;
+      height: 100%;
+      width: 100%;
+    }
+
+/**************************************
+  everything
+**************************************/
+
+.page-main-master{
+
+}
+
+.page-main-editor{
+
+}
+
+  .page-main-editor-main{
+    // text-align: center;
+    // border: 5px solid purple;
+  }
+
+  .page-main-editor-main-message{
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-family: $font-text;
+    padding-bottom: 30px;
+    padding-top: 50px;
+  }
+
+  .page-main-editor-main-rows{
+    // border: 5px solid red;
+  }
+
+    .page-main-editor-main-rows-row{
+      // border: 5px solid blue;
+      // border-top: 3px solid $color-grey;
+      width: 98vw;
+      margin: auto;
+      border-radius: 10px;
+      margin-top: 10px;
+      overflow: hieen;
+    }
+
+      .page-main-editor-main-rows-row-message{
+        padding: 10px;
+        text-align: center;
+        font-size: 24px;
+        font-family: $font-text;
+        padding-bottom: 30px;
+      }
+
+      .page-main-editor-main-rows-row-containers{
+        // border: 5px solid pink;
+        user-select: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        overflow: hidden;
+        // border-top: 3px solid $color-grey;
+      }
+
+        .page-main-editor-main-rows-row-containers-container{
+          // border: 5px solid yellow;
+          min-height: 100px;
+          display: inline-block;
+          vertical-align: middle;
+          border-radius: 10px;
+          margin-left: 10px;
+          max-width: 98vw;
+          overflow: hidden;
+          padding-bottom: 5px;
+        }
+
+        /**********************************
+          fields
+        **********************************/
+
+        .page-main-editor-main-rows-row-containers-container-field_new{
+          text-align: center;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          max-width: 250px;
+        }
+
+          .page-main-editor-main-rows-row-containers-container-field_new-button{
+            background-color: $color-primary;
+            display: inline-block;
+            // float: left;
+            padding: 5px;
+            margin: 5px;
+            font-family: $font-text;
+            color:white;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+        /**********************************
+          container editor
+        **********************************/
+
+        .page-main-editor-main-rows-row-containers-container-editor{
+          // border: 5px solid red;
+          // border-radius: 5px;
+          // overflow: hidden;
+          // position: fixed;
+          background-color: white;
+        }
+
+          .page-main-editor-main-rows-row-containers-container-editor-fields{
+            // border: 5px solid pink;
+            padding: 10px;
+          }
+
+            .page-main-editor-main-rows-row-containers-container-editor-fields-field{
+              width: 100%;
+              border: 0px;
+              border-bottom: 1px solid $color-primary;
+              padding: 5px;
+              // border: 5px solid silver;
+            }
+
+          .page-main-editor-main-rows-row-containers-container-editor-buttons{
+            // border: 5px solid purple;
+            text-align: right;
+          }
+
+            .page-main-editor-main-rows-row-containers-container-editor-buttons-button{
+              // border: 5px solid blue;
+              display: inline-block;
+              background-color: $color-primary;
+              margin: 5px;
+              padding: 5px;
+              border-radius: 5px;
+              color:white;
+              font-family: $font-text;
+              cursor: pointer;
+            }
+
+  .page-main-editor-main-new_row{
+    cursor: pointer;
+    // display: inline-block;
+    padding: 10px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 200px;
+    text-align: center;
+    font-family: $font-text;
+    font-size: 24px;
+    color:white;
+    background-color: $color-primary;
+    border-radius: 10px;
+  }
