@@ -10647,9 +10647,9 @@ module.exports = (data,controller)=>{
 
   let input = engine.global.function.codemirror(engine.get.element(main),{
     value:value,
-    // placeholder:'text goes here',
     lineNumbers: true,
-    viewportMargin:Infinity
+    viewportMargin:Infinity,
+    lineWrapping:true
   });
 
 }

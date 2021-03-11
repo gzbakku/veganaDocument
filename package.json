@@ -1,6 +1,6 @@
 {
   "name": "veganaDocument",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "this is a vegana document editor, its a simple web format to build web pages faster and easier without diving into deep code.",
   "main": "electro.js",
   "scripts": {
