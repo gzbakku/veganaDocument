@@ -1,24 +1,31 @@
 
 
 .page-main-editor-main-rows-row-containers-container-field{
-  // border: 5px solid red;
-  width: 100%;
+  // border: 5px solid pink;
+  display: block;
+  // overflow: auto;
+  // width: 100%;
+  // border-top: 3px solid $color-grey;
 }
 
 .page-main-editor-main-rows-row-containers-container-field-textarea{
-  border: 0px;
-  border-top: 1px solid $color-grey;
-  padding: 5px;
-  padding-top: 10px;
-  width: 100%;
-  height: auto;
-  outline: 0px;
-  min-width: 100%;
-  max-width:100%;
+  // border: 5px solid red;
+  // float: left;
+  // display: block;
+  // height: 600px;
+  border-top: 3px solid $color-grey;
+  // min-height: 100px;
 }
 
 .page-main-editor-main-rows-row-containers-container-field-heading{
   font-size: 24px;
+  border: 0px;
+  width: 100%;
+  border-top: 3px solid $color-grey;
+  padding: 10px;
+  // user-select: none;
+  outline: 0px;
+  // border: 5px solid red;
 }
 
 

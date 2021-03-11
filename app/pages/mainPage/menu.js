@@ -9,6 +9,18 @@ module.exports = (data)=>{
     class:'page-main-editor-menu'
   });
 
+  if(data.hasOwnProperty("title")){
+    let title = 'new field';
+    if(data.title){
+      title = data.title;
+    }
+    engine.make.div({
+      parent:main,
+      class:'page-main-editor-menu-title',
+      text:title
+    });
+  }
+
   for(let button of data.buttons){
     make_button(button);
   }

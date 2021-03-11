@@ -45,9 +45,16 @@ function make_row(parent,row){
     class:'ui-cmmon-comp-veganaDocViewComp-main-rows-row'
   });
 
+  let draw = {all:{}};
+  if(row.style){
+    draw.all = row.style;
+    draw.all.display = 'grid';
+  }
+
   const containers = engine.make.div({
     parent:main,
-    class:'ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers'
+    class:'ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers',
+    draw:draw
   });
 
   for(let contId of row.template){

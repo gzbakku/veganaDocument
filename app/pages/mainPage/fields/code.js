@@ -10,22 +10,24 @@ module.exports = (data,controller)=>{
     value = article.rows[data.rowId].containers[data.contId].field.data.value;
   }
 
-  const textareaId = engine.make.textarea({
+  const main = engine.make.div({
     parent:data.parent,
-    placeholder:'code goes here',
     class:'page-main-editor-main-rows-row-containers-container-field-textarea',
-    value:value,
-    rows:[...value.matchAll(/\n/g)].length,
-    function:(_,v)=>{
+    event:{type:'keyup',function:()=>{
+      let v = input.getValue();
       let article = controller.functions.get();
       article.rows[data.rowId].containers[data.contId].field.data = {
         value:v
       };
       controller.functions.update(article);
-      textareaObject.rows = [...v.matchAll(/\n/g)].length;
-    }
+    }}
   });
 
-  let textareaObject = engine.get.element(textareaId);
+  let input = engine.global.function.codemirror(engine.get.element(main),{
+    value:value,
+    // placeholder:'text goes here',
+    lineNumbers: true,
+    viewportMargin:Infinity
+  });
 
 }

@@ -20,260 +20,6 @@ files in lazy modules are lazy css and are needed to be loaded with module loade
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
 
-/*???????????????????
-
-"@" - for sub files in a sass tree structure, ignored in main sass compiler
-example - "@sub_component.scss"
-this file is compiled only when its parent is compiled and ignored if its parent-less
-
-"!" - for files to ignore in main sass compiler
-example - "!ignored_sass_file.scss"
-this file is ignored
-
-???????????????????*/
-.page-main-comp-menu-main {
-  text-align: right; }
-
-.page-main-comp-menu-main-path {
-  float: left;
-  font-family: "Montserrat-Regular";
-  color: #48426d;
-  font-size: 12px;
-  padding: 10px; }
-
-.page-main-comp-menu-main-button {
-  background-color: #ff577f;
-  font-family: "Montserrat-Regular";
-  display: inline-block;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-  user-select: none; }
-
-.page-main-editor-main-rows-row-containers-container-field {
-  width: 100%; }
-
-.page-main-editor-main-rows-row-containers-container-field-textarea {
-  border: 0px;
-  border-top: 1px solid #b8b8b8;
-  padding: 5px;
-  padding-top: 10px;
-  width: 100%;
-  height: auto;
-  outline: 0px;
-  min-width: 100%;
-  max-width: 100%; }
-
-.page-main-editor-main-rows-row-containers-container-field-heading {
-  font-size: 24px; }
-
-.page-main-editor-main-rows-row-containers-container-image-img_cont {
-  text-align: center; }
-
-.page-main-editor-main-rows-row-containers-container-image-message-text {
-  text-align: center;
-  padding: 10px;
-  font-size: 24px;
-  font-family: "Montserrat-Regular"; }
-
-.page-main-editor-main-rows-row-containers-container-image-menu {
-  border-top: 1px solid #b8b8b8;
-  padding: 10px;
-  text-align: right; }
-
-.page-main-editor-main-rows-row-containers-container-image-menu-img {
-  height: 25px;
-  width: 25px;
-  cursor: pointer; }
-
-.page-main-editor-main-rows-row-containers-container-image-editor {
-  text-align: center; }
-
-.page-main-editor-main-rows-row-containers-container-field-image-editor-input {
-  border: 2px solid #b8b8b8;
-  width: 90%;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 5px;
-  outline: 0px; }
-
-.page-main-editor-main-rows-row-containers-container-field-image-editor-button {
-  background-color: #48426d;
-  color: white;
-  width: 50%;
-  border-radius: 10px;
-  border: 0px;
-  padding: 5px;
-  font-size: 24px;
-  font-family: "Montserrat-Regular";
-  margin: 10px; }
-
-.page-main-editor-menu {
-  padding: 10px;
-  overflow: auto; }
-
-.page-main-editor-menu-button {
-  height: 25px;
-  width: 25px;
-  float: right;
-  margin-left: 10px;
-  cursor: pointer;
-  position: relative;
-  user-select: none; }
-
-.page-main-editor-menu-button-icon {
-  top: 0px;
-  left: 0px;
-  position: absolute;
-  height: 100%;
-  width: 100%; }
-
-.page-main-editor-menu-button-foreground {
-  top: 0px;
-  left: 0px;
-  position: absolute;
-  height: 100%;
-  width: 100%; }
-
-/**************************************
-  everything
-**************************************/
-.page-main-editor-main-message {
-  padding: 10px;
-  text-align: center;
-  font-size: 24px;
-  font-family: "Montserrat-Regular";
-  padding-bottom: 30px;
-  padding-top: 50px; }
-
-.page-main-editor-main-rows-row {
-  width: 98vw;
-  margin: auto;
-  border-radius: 10px;
-  margin-top: 10px;
-  overflow: hieen; }
-
-.page-main-editor-main-rows-row-message {
-  padding: 10px;
-  text-align: center;
-  font-size: 24px;
-  font-family: "Montserrat-Regular";
-  padding-bottom: 30px; }
-
-.page-main-editor-main-rows-row-containers {
-  user-select: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 100%;
-  overflow: hidden; }
-
-.page-main-editor-main-rows-row-containers-container {
-  min-height: 100px;
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: 10px;
-  margin-left: 10px;
-  max-width: 98vw;
-  overflow: hidden;
-  padding-bottom: 5px; }
-
-/**********************************
-          fields
-        **********************************/
-.page-main-editor-main-rows-row-containers-container-field_new {
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  max-width: 250px; }
-
-.page-main-editor-main-rows-row-containers-container-field_new-button {
-  background-color: #48426d;
-  display: inline-block;
-  padding: 5px;
-  margin: 5px;
-  font-family: "Montserrat-Regular";
-  color: white;
-  border-radius: 5px;
-  cursor: pointer; }
-
-/**********************************
-          container editor
-        **********************************/
-.page-main-editor-main-rows-row-containers-container-editor {
-  background-color: white; }
-
-.page-main-editor-main-rows-row-containers-container-editor-fields {
-  padding: 10px; }
-
-.page-main-editor-main-rows-row-containers-container-editor-fields-field {
-  width: 100%;
-  border: 0px;
-  border-bottom: 1px solid #48426d;
-  padding: 5px; }
-
-.page-main-editor-main-rows-row-containers-container-editor-buttons {
-  text-align: right; }
-
-.page-main-editor-main-rows-row-containers-container-editor-buttons-button {
-  display: inline-block;
-  background-color: #48426d;
-  margin: 5px;
-  padding: 5px;
-  border-radius: 5px;
-  color: white;
-  font-family: "Montserrat-Regular";
-  cursor: pointer; }
-
-.page-main-editor-main-new_row {
-  cursor: pointer;
-  padding: 10px;
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  width: 200px;
-  text-align: center;
-  font-family: "Montserrat-Regular";
-  font-size: 24px;
-  color: white;
-  background-color: #48426d;
-  border-radius: 10px; }
-
-/*???????????????????
-
-"@" - for sub files in a sass tree structure, ignored in main sass compiler
-example - "@sub_component.scss"
-this file is compiled only when its parent is compiled and ignored if its parent-less
-
-"!" - for files to ignore in main sass compiler
-example - "!ignored_sass_file.scss"
-this file is ignored
-
-???????????????????*/
-/*???????????????????
-
-"@" - for sub files in a sass tree structure, ignored in main sass compiler
-example - "@sub_component.scss"
-this file is compiled only when its parent is compiled and ignored if its parent-less
-
-"!" - for files to ignore in main sass compiler
-example - "!ignored_sass_file.scss"
-this file is ignored
-
-???????????????????*/
-/*???????????????????
-
-"@" - for sub files in a sass tree structure, ignored in main sass compiler
-example - "@sub_component.scss"
-this file is compiled only when its parent is compiled and ignored if its parent-less
-
-"!" - for files to ignore in main sass compiler
-example - "!ignored_sass_file.scss"
-this file is ignored
-
-???????????????????*/
 /* BASICS */
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
@@ -696,6 +442,257 @@ div.CodeMirror-dragcursors {
 span.CodeMirror-selectedtext {
   background: none; }
 
+.CodeMirror {
+  z-index: 0;
+  height: auto; }
+
+/*???????????????????
+
+"@" - for sub files in a sass tree structure, ignored in main sass compiler
+example - "@sub_component.scss"
+this file is compiled only when its parent is compiled and ignored if its parent-less
+
+"!" - for files to ignore in main sass compiler
+example - "!ignored_sass_file.scss"
+this file is ignored
+
+???????????????????*/
+.page-main-comp-menu-main {
+  text-align: right; }
+
+.page-main-comp-menu-main-path {
+  float: left;
+  font-family: "Montserrat-Regular";
+  color: #48426d;
+  font-size: 12px;
+  padding: 10px; }
+
+.page-main-comp-menu-main-button {
+  background-color: #ff577f;
+  font-family: "Montserrat-Regular";
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  user-select: none; }
+
+.page-main-editor-main-rows-row-containers-container-field {
+  display: block; }
+
+.page-main-editor-main-rows-row-containers-container-field-textarea {
+  border-top: 3px solid #b8b8b8; }
+
+.page-main-editor-main-rows-row-containers-container-field-heading {
+  font-size: 24px;
+  border: 0px;
+  width: 100%;
+  border-top: 3px solid #b8b8b8;
+  padding: 10px;
+  outline: 0px; }
+
+.page-main-editor-main-rows-row-containers-container-image-img_cont {
+  text-align: center; }
+
+.page-main-editor-main-rows-row-containers-container-image-message-text {
+  text-align: center;
+  padding: 10px;
+  font-size: 24px;
+  font-family: "Montserrat-Regular"; }
+
+.page-main-editor-main-rows-row-containers-container-image-menu {
+  border-top: 1px solid #b8b8b8;
+  padding: 10px;
+  text-align: right; }
+
+.page-main-editor-main-rows-row-containers-container-image-menu-img {
+  height: 25px;
+  width: 25px;
+  cursor: pointer; }
+
+.page-main-editor-main-rows-row-containers-container-image-editor {
+  text-align: center; }
+
+.page-main-editor-main-rows-row-containers-container-field-image-editor-input {
+  border: 2px solid #b8b8b8;
+  width: 90%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  outline: 0px; }
+
+.page-main-editor-main-rows-row-containers-container-field-image-editor-button {
+  background-color: #48426d;
+  color: white;
+  width: 50%;
+  border-radius: 10px;
+  border: 0px;
+  padding: 5px;
+  font-size: 24px;
+  font-family: "Montserrat-Regular";
+  margin: 10px; }
+
+.page-main-editor-menu {
+  padding: 10px;
+  overflow: auto; }
+
+.page-main-editor-menu-title {
+  font-family: "Montserrat-Regular";
+  font-size: 14px;
+  float: left; }
+
+.page-main-editor-menu-button {
+  height: 25px;
+  width: 25px;
+  float: right;
+  margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+  user-select: none; }
+
+.page-main-editor-menu-button-icon {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 100%;
+  width: 100%; }
+
+.page-main-editor-menu-button-foreground {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 100%;
+  width: 100%; }
+
+/**************************************
+  everything
+**************************************/
+.page-main-editor-main-message {
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Montserrat-Regular";
+  padding-bottom: 30px;
+  padding-top: 50px; }
+
+.page-main-editor-main-rows-row {
+  width: 98vw;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 10px; }
+
+.page-main-editor-main-rows-row-message {
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Montserrat-Regular";
+  padding-bottom: 30px; }
+
+.page-main-editor-main-rows-row-containers {
+  user-select: none; }
+
+.page-main-editor-main-rows-row-containers-container {
+  vertical-align: middle;
+  border-radius: 3px;
+  max-width: 98vw;
+  padding-bottom: 5px;
+  border: 1px solid #b8b8b8; }
+
+/**********************************
+          fields
+        **********************************/
+.page-main-editor-main-rows-row-containers-container-field_new {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.page-main-editor-main-rows-row-containers-container-field_new-button {
+  background-color: #48426d;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  font-family: "Montserrat-Regular";
+  color: white;
+  border-radius: 5px;
+  cursor: pointer; }
+
+/**********************************
+          container editor
+        **********************************/
+.page-main-editor-main-rows-row-containers-container-editor {
+  background-color: white; }
+
+.page-main-editor-main-rows-row-containers-container-editor-fields {
+  padding: 10px; }
+
+.page-main-editor-main-rows-row-containers-container-editor-fields-field {
+  width: 100%;
+  border: 0px;
+  border-bottom: 1px solid #48426d;
+  padding: 5px; }
+
+.page-main-editor-main-rows-row-containers-container-editor-buttons {
+  text-align: right; }
+
+.page-main-editor-main-rows-row-containers-container-editor-buttons-button {
+  display: inline-block;
+  background-color: #48426d;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Montserrat-Regular";
+  cursor: pointer; }
+
+.page-main-editor-main-new_row {
+  cursor: pointer;
+  padding: 10px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 200px;
+  text-align: center;
+  font-family: "Montserrat-Regular";
+  font-size: 24px;
+  color: white;
+  background-color: #48426d;
+  border-radius: 10px; }
+
+/*???????????????????
+
+"@" - for sub files in a sass tree structure, ignored in main sass compiler
+example - "@sub_component.scss"
+this file is compiled only when its parent is compiled and ignored if its parent-less
+
+"!" - for files to ignore in main sass compiler
+example - "!ignored_sass_file.scss"
+this file is ignored
+
+???????????????????*/
+/*???????????????????
+
+"@" - for sub files in a sass tree structure, ignored in main sass compiler
+example - "@sub_component.scss"
+this file is compiled only when its parent is compiled and ignored if its parent-less
+
+"!" - for files to ignore in main sass compiler
+example - "!ignored_sass_file.scss"
+this file is ignored
+
+???????????????????*/
+/*???????????????????
+
+"@" - for sub files in a sass tree structure, ignored in main sass compiler
+example - "@sub_component.scss"
+this file is compiled only when its parent is compiled and ignored if its parent-less
+
+"!" - for files to ignore in main sass compiler
+example - "!ignored_sass_file.scss"
+this file is ignored
+
+???????????????????*/
 .ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers-container-field {
   height: 100%;
   overflow: hidden;
@@ -716,18 +713,6 @@ span.CodeMirror-selectedtext {
 
 .ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers-container-field-code {
   height: 100%;
-  overflow: hidden; }
-
-.ui-cmmon-comp-veganaDocViewComp-main-rows-row {
-  overflow: auto;
-  width: 100%; }
-
-.ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers {
-  vertical-align: middle;
-  width: 100%; }
-
-.ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers-container {
-  float: left;
   overflow: hidden; }
 
 * {

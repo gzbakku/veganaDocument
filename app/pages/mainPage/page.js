@@ -245,6 +245,14 @@ function make_row(parent,row,controller,anchor_row_id,position,manage_article_me
 
   const row_cont = engine.make.div(row_cont_controller);
 
+  let containers_draw = {draw:{all:{}}};
+  if(row.style && row.style['grid-template-columns']){
+    containers_draw.draw.all = {
+      'grid-template-columns':row.style['grid-template-columns'],
+      'display':'grid'
+    };
+  }
+
     const menu = controller.functions.make_menu({
       parent:row_cont,
       buttons:[
@@ -260,6 +268,20 @@ function make_row(parent,row,controller,anchor_row_id,position,manage_article_me
           controller.functions.update(article);
           manage_row_message();
           make_container(containers,cont,controller,row.id,manage_row_message,reset_containers);
+        }},
+        {type:'edit',function:()=>{
+          controller.functions.make_editor({
+            style:row.style,
+            fields:['grid-template-columns'],
+            parent:row_cont,
+            onUpdate:(data)=>{
+              console.log(data);
+              engine.set.style(row_cont,data);
+              let article = controller.functions.get();
+              article.rows[row.id].style = data;
+              controller.functions.update(article);
+            }
+          });
         }},
         {type:'move',
           onDown:()=>{
@@ -306,7 +328,8 @@ function make_row(parent,row,controller,anchor_row_id,position,manage_article_me
 
       containers = engine.make.div({
         parent:row_cont,
-        class:'page-main-editor-main-rows-row-containers'
+        class:'page-main-editor-main-rows-row-containers',
+        draw:containers_draw.draw
       });
 
       let article = controller.functions.get();
@@ -358,12 +381,13 @@ function make_container(parent,container,controller,rowId,manage_row_message,res
 
   const container_cont = engine.make.div({
     parent:parent,
-    class:'card page-main-editor-main-rows-row-containers-container'
+    class:'page-main-editor-main-rows-row-containers-container'
   });
 
   if(container.style){engine.set.style(container_cont,container.style);}
 
     const menu = controller.functions.make_menu({
+      title:container.field ? container.field.type : null,
       parent:container_cont,
       buttons:[
         {type:'delete',function:()=>{

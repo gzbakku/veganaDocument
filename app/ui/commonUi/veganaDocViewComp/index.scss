@@ -11,7 +11,7 @@ this file is ignored
 ???????????????????*/
 
 // @import '../../../../node_modules/codemirror/lib/codemirror.css';
-@import './codemirror.scss';
+// @import './codemirror.scss';
 @import './fields/@index.scss';
 
 .ui-cmmon-comp-veganaDocViewComp-main{
@@ -24,19 +24,12 @@ this file is ignored
 
     .ui-cmmon-comp-veganaDocViewComp-main-rows-row{
       // border: 5px solid blue;
-      overflow: auto;
-      width: 100%;
-      // height: auto;
     }
 
       .ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers{
         // border: 5px solid pink;
-        vertical-align: middle;
-        width: 100%;
       }
 
         .ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers-container{
           // border: 5px solid yellow;
-          float: left;
-          overflow: hidden;
         }

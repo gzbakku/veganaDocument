@@ -51,6 +51,10 @@ function build(){
     }
     make_path();
 
+    make_button('reset',()=>{
+      engine.router.navigate.new.page(engine.get.pageModule("mainPage"));
+    });
+
     make_button('new',()=>{
       engine.data.reset("active_article",window.active_article_template,"local");
       engine.data.delete("article_path","local");

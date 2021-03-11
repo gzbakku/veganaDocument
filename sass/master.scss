@@ -27,8 +27,16 @@ files in lazy modules are lazy css and are needed to be loaded with module loade
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
+@import './codemirror.scss';
+
+.CodeMirror{
+    z-index: 0;
+    height: auto;
+}
+
 @import './sass_variables.scss';
 @import './vegana_tree.scss';
+
 
 //------------------------
 // import your files here

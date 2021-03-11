@@ -1,4 +1,4 @@
-const codemirror = require("codemirror/lib/codemirror.js");
+// const codemirror = require("codemirror/lib/codemirror.js");
 
 module.exports = {init:init};
 
@@ -26,8 +26,8 @@ function make_code(parent,data){
     parent:parent,
     class:"ui-cmmon-comp-veganaDocViewComp-main-rows-row-containers-container-field-code"
   });
-  console.log(data.value);
-  codemirror(engine.get.element(main),{
+  // console.log(data.value);
+  engine.global.function.codemirror(engine.get.element(main),{
     value:data.value,
     lineNumbers: true,
     mode:'javascript'

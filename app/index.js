@@ -6,6 +6,8 @@ const startPage = mainPage; //declare the first page module here
 
 require("./ui/index");
 
+engine.add.function("codemirror",require("./codemirror"));
+
 /*
 set the base url to the native vegana cdn,or if hosting on non native platform please
 set the baseurl to where the files for the project are held.
