@@ -10409,9 +10409,9 @@ function build(){
 
     if(engine.get.platform("electron")){
       const electron = require("electron");
-      // electron.ipcRenderer.on("updateLocation",(_,l)=>{
-      //   engine.data.reset("article_path",l,"local");
-      // });
+      electron.ipcRenderer.on("updateLocation",(_,l)=>{
+        engine.data.reset("article_path",l,"local");
+      });
       // electron.ipcRenderer.on("updateArticle",(_,d)=>{
       //   engine.data.reset("active_article",d,"local");
       //   engine.router.navigate.new.page(engine.get.pageModule("mainPage"));
@@ -10465,7 +10465,9 @@ function build(){
     if(path){
       make_button('saveAs',()=>{
         let article = engine.data.get("active_article","local");
+        let electron = require("electron");
         electron.ipcRenderer.send("saveAs",article);
+        console.log("saveAs");
       },true);
     }
 
@@ -11043,6 +11045,8 @@ function build(){
 
 function make_editor(parent,controller){
 
+  const article = controller.functions.get();
+
   const main = engine.make.div({
     parent:parent,
     class:'page-main-editor-main'
@@ -11057,6 +11061,7 @@ function make_editor(parent,controller){
         type:'string',
         placeholder:'title',
         parent:meta,
+        value:article.title,
         class:'page-main-editor-main-meta-input',
         function:(i,value)=>{
           let article = controller.functions.get();
@@ -11065,9 +11070,23 @@ function make_editor(parent,controller){
         }
       });
 
+      engine.make.input({
+        type:'string',
+        placeholder:'keywords',
+        value:article.keywords,
+        parent:meta,
+        class:'page-main-editor-main-meta-input',
+        function:(i,value)=>{
+          let article = controller.functions.get();
+          article.keywords = value;
+          controller.functions.update(article);
+        }
+      });
+
       engine.make.textarea({
         type:'string',
         placeholder:'discription',
+        value:article.discription,
         parent:meta,
         rows:3,
         class:'page-main-editor-main-meta-input',
@@ -11078,7 +11097,7 @@ function make_editor(parent,controller){
         }
       });
 
-    const article = controller.functions.get();
+
 
     const messageCont = engine.make.div({
       parent:main,

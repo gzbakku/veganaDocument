@@ -109,6 +109,8 @@ function build(){
 
 function make_editor(parent,controller){
 
+  const article = controller.functions.get();
+
   const main = engine.make.div({
     parent:parent,
     class:'page-main-editor-main'
@@ -123,6 +125,7 @@ function make_editor(parent,controller){
         type:'string',
         placeholder:'title',
         parent:meta,
+        value:article.title,
         class:'page-main-editor-main-meta-input',
         function:(i,value)=>{
           let article = controller.functions.get();
@@ -131,9 +134,23 @@ function make_editor(parent,controller){
         }
       });
 
+      engine.make.input({
+        type:'string',
+        placeholder:'keywords',
+        value:article.keywords,
+        parent:meta,
+        class:'page-main-editor-main-meta-input',
+        function:(i,value)=>{
+          let article = controller.functions.get();
+          article.keywords = value;
+          controller.functions.update(article);
+        }
+      });
+
       engine.make.textarea({
         type:'string',
         placeholder:'discription',
+        value:article.discription,
         parent:meta,
         rows:3,
         class:'page-main-editor-main-meta-input',
@@ -144,7 +161,7 @@ function make_editor(parent,controller){
         }
       });
 
-    const article = controller.functions.get();
+
 
     const messageCont = engine.make.div({
       parent:main,

@@ -29,9 +29,9 @@ function build(){
 
     if(engine.get.platform("electron")){
       const electron = require("electron");
-      // electron.ipcRenderer.on("updateLocation",(_,l)=>{
-      //   engine.data.reset("article_path",l,"local");
-      // });
+      electron.ipcRenderer.on("updateLocation",(_,l)=>{
+        engine.data.reset("article_path",l,"local");
+      });
       // electron.ipcRenderer.on("updateArticle",(_,d)=>{
       //   engine.data.reset("active_article",d,"local");
       //   engine.router.navigate.new.page(engine.get.pageModule("mainPage"));
@@ -85,7 +85,9 @@ function build(){
     if(path){
       make_button('saveAs',()=>{
         let article = engine.data.get("active_article","local");
+        let electron = require("electron");
         electron.ipcRenderer.send("saveAs",article);
+        console.log("saveAs");
       },true);
     }
 
