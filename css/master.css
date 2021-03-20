@@ -570,6 +570,24 @@ this file is ignored
 /**************************************
   everything
 **************************************/
+.page-main-editor-main-meta {
+  border-radius: 10px;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border: 1px solid #b8b8b8; }
+
+.page-main-editor-main-meta-input {
+  width: 100%;
+  padding: 10px;
+  border: 0px;
+  border-top: 1px solid #b8b8b8;
+  outline: 0px;
+  max-width: 100%;
+  min-width: 100%; }
+
 .page-main-editor-main-message {
   padding: 10px;
   text-align: center;

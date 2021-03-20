@@ -10409,13 +10409,19 @@ function build(){
 
     if(engine.get.platform("electron")){
       const electron = require("electron");
-      electron.ipcRenderer.on("updateLocation",(_,l)=>{
-        engine.data.reset("article_path",l,"local");
-      });
-      electron.ipcRenderer.on("updateArticle",(_,d)=>{
-        engine.data.reset("active_article",d,"local");
+      // electron.ipcRenderer.on("updateLocation",(_,l)=>{
+      //   engine.data.reset("article_path",l,"local");
+      // });
+      // electron.ipcRenderer.on("updateArticle",(_,d)=>{
+      //   engine.data.reset("active_article",d,"local");
+      //   engine.router.navigate.new.page(engine.get.pageModule("mainPage"));
+      //   // make_path();
+      // });
+      electron.ipcRenderer.on("updateArticle",(_,data,path)=>{
+        engine.data.reset("active_article",data,"local");
+        engine.data.reset("article_path",path,"local");
         engine.router.navigate.new.page(engine.get.pageModule("mainPage"));
-        // make_path();
+        electron.ipcRenderer.send("reopen_window");
       });
     }
 
@@ -10454,6 +10460,14 @@ function build(){
         electron.ipcRenderer.send("saveAs",article);
       }
     },true);
+
+    let path = engine.data.get("article_path","local");
+    if(path){
+      make_button('saveAs',()=>{
+        let article = engine.data.get("active_article","local");
+        electron.ipcRenderer.send("saveAs",article);
+      },true);
+    }
 
     make_button("open",()=>{
       let electron = require("electron");
@@ -11033,6 +11047,36 @@ function make_editor(parent,controller){
     parent:parent,
     class:'page-main-editor-main'
   });
+
+    const meta = engine.make.div({
+      parent:main,
+      class:'page-main-editor-main-meta'
+    });
+
+      engine.make.input({
+        type:'string',
+        placeholder:'title',
+        parent:meta,
+        class:'page-main-editor-main-meta-input',
+        function:(i,value)=>{
+          let article = controller.functions.get();
+          article.title = value;
+          controller.functions.update(article);
+        }
+      });
+
+      engine.make.textarea({
+        type:'string',
+        placeholder:'discription',
+        parent:meta,
+        rows:3,
+        class:'page-main-editor-main-meta-input',
+        function:(i,value)=>{
+          let article = controller.functions.get();
+          article.discription = value;
+          controller.functions.update(article);
+        }
+      });
 
     const article = controller.functions.get();
 

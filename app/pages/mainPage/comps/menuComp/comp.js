@@ -29,13 +29,19 @@ function build(){
 
     if(engine.get.platform("electron")){
       const electron = require("electron");
-      electron.ipcRenderer.on("updateLocation",(_,l)=>{
-        engine.data.reset("article_path",l,"local");
-      });
-      electron.ipcRenderer.on("updateArticle",(_,d)=>{
-        engine.data.reset("active_article",d,"local");
+      // electron.ipcRenderer.on("updateLocation",(_,l)=>{
+      //   engine.data.reset("article_path",l,"local");
+      // });
+      // electron.ipcRenderer.on("updateArticle",(_,d)=>{
+      //   engine.data.reset("active_article",d,"local");
+      //   engine.router.navigate.new.page(engine.get.pageModule("mainPage"));
+      //   // make_path();
+      // });
+      electron.ipcRenderer.on("updateArticle",(_,data,path)=>{
+        engine.data.reset("active_article",data,"local");
+        engine.data.reset("article_path",path,"local");
         engine.router.navigate.new.page(engine.get.pageModule("mainPage"));
-        // make_path();
+        electron.ipcRenderer.send("reopen_window");
       });
     }
 
@@ -74,6 +80,14 @@ function build(){
         electron.ipcRenderer.send("saveAs",article);
       }
     },true);
+
+    let path = engine.data.get("article_path","local");
+    if(path){
+      make_button('saveAs',()=>{
+        let article = engine.data.get("active_article","local");
+        electron.ipcRenderer.send("saveAs",article);
+      },true);
+    }
 
     make_button("open",()=>{
       let electron = require("electron");

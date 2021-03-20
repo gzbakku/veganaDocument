@@ -33,13 +33,14 @@ ipc.respondTo('open',async () => {
   if(getLocation.canceled){return false;}
 
   let path = getLocation.filePaths[0];
-  win.send("updateLocation",path);
+
 
   let data = fs.readFile(path,'utf-8',(e,d)=>{
     if(e){return false;}
     let parse = toJson(d);
     if(parse){
-      win.send("updateArticle",parse);
+      // win.send("updateLocation",path);
+      win.send("updateArticle",parse,path);
     }
   });
 
@@ -57,6 +58,18 @@ function toJson(d){
   }
   return get;
 }
+
+ipc.respondTo('reopen_window', (_,data) => {
+  // console.log(win);
+  let old = win;
+  createWindow();
+  old.close();
+  // win = null;
+  // setTimeout(function () {
+  //
+  // }, 1000);
+
+});
 
 ipc.respondTo('save', (_,data) => {
   let asText = JSON.stringify(data.data,null,2);

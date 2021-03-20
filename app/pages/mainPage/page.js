@@ -114,6 +114,36 @@ function make_editor(parent,controller){
     class:'page-main-editor-main'
   });
 
+    const meta = engine.make.div({
+      parent:main,
+      class:'page-main-editor-main-meta'
+    });
+
+      engine.make.input({
+        type:'string',
+        placeholder:'title',
+        parent:meta,
+        class:'page-main-editor-main-meta-input',
+        function:(i,value)=>{
+          let article = controller.functions.get();
+          article.title = value;
+          controller.functions.update(article);
+        }
+      });
+
+      engine.make.textarea({
+        type:'string',
+        placeholder:'discription',
+        parent:meta,
+        rows:3,
+        class:'page-main-editor-main-meta-input',
+        function:(i,value)=>{
+          let article = controller.functions.get();
+          article.discription = value;
+          controller.functions.update(article);
+        }
+      });
+
     const article = controller.functions.get();
 
     const messageCont = engine.make.div({

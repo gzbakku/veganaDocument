@@ -62,6 +62,28 @@
     // border: 5px solid purple;
   }
 
+    .page-main-editor-main-meta{
+      border-radius: 10px;
+      width: 90%;
+      margin: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      // border: 5px solid red;
+      border: 1px solid $color-grey;
+    }
+
+      .page-main-editor-main-meta-input{
+        width: 100%;
+        padding: 10px;
+        // border-radius: 10px;
+        border: 0px;
+        border-top: 1px solid $color-grey;
+        outline: 0px;
+        max-width: 100%;
+        min-width: 100%;
+      }
+
   .page-main-editor-main-message{
     padding: 10px;
     text-align: center;
@@ -197,3 +219,7 @@
     background-color: $color-primary;
     border-radius: 10px;
   }
+
+.page-main-editor-main-messageCont{}
+
+.card{}
